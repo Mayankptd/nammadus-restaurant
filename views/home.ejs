@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+	   
+		<link rel="stylesheet" href="bootstrap.min.css">
+	  
+	
+	</head>
+<body> 
+	<div class="container">
+		<div class="row row-content justify-content-center"  id="reservation">
+			<div class="col-12">
+			  <div class="card">
+				<h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+				<div class="card-body">
+				  <form action="/book" method="POST">
+					<div class="form-group row">
+						<label class="col-12 col-sm-2">Number of Guests</label>
+						<div class="col">
+						  <div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="one_guest_radio" value="one" checked>
+							<label class="form-check-label" for="one_guest_radio">1</label>
+						 </div>
+						 <div class="form-check form-check-inline">
+						   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="two_guest_radio" value="two">
+						   <label class="form-check-label" for="two_guest_radio">2</label>
+						 </div>
+						 <div class="form-check form-check-inline">
+						   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="three_guest_radio" value="three">
+						   <label class="form-check-label" for="three_guest_radio">3</label>
+						 </div>
+						 <div class="form-check form-check-inline">
+						   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="four_guest_radio" value="four">
+						   <label class="form-check-label" for="four_guest_radio">4</label>
+						 </div>
+						 <div class="form-check form-check-inline">
+						   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="six_guest_radio" value="six">
+						   <label class="form-check-label" for="six_guest_radio">6</label>
+						 </div>
+						</div>
+					</div>
+					
+					<div class="form-group row">
+					  <label class="col-12 col-sm-2">Date and Time</label>
+					  <div class="col-12 col-sm-4">
+						  
+						<input type="date" class="form-control" name="date" id="date" placeholder="Date">
+					  </div>
+					  <div class="col-12 col-sm-4">
+						
+						<input type="time" class="form-control"name="time" id="time" placeholder="Time">
+					  </div>
+					</div>
+					<form action="payment" method="POST"> 
+
+
+	
+						<script
+							src="//checkout.stripe.com/v2/checkout.js"
+							class="stripe-button"
+							data-key="<%= key %>" 
+							data-amount="10000" 
+							data-currency="inr" 
+							data-name="Namadas" 
+							data-description="Book Your Table" 
+							data-locale="auto" > 
+							</script>				
+				  
+
+
+</form>
+
+	</form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+		
+		  
+			</div>
+
+</body> 
+</html> 
